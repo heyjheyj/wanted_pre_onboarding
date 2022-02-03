@@ -1,0 +1,28 @@
+.tagcomponent {
+    padding: 0 8px;
+    margin: 6px 0 0 6px;
+    width: auto;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    list-style: none;
+    border-radius: 5px;
+    background-color: #431cc6;
+}
+
+.tagcomponent > span {
+    font-weight: 600;
+}
+
+.tagcomponent > button {
+    width: 16px;
+    height: 16px;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    margin-left: 3px;
+}

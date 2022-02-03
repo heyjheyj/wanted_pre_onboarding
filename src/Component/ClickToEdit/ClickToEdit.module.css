@@ -1,0 +1,29 @@
+.container {
+    margin-top: 10px;
+    width: 80%;
+    height: 200px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.title {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.input, .nameinput, .ageinput {
+    margin-left: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.nameinput:focus-within, .ageinput:focus-within {
+    border: 2px solid #431cc6;
+    border-radius: 2px;
+}

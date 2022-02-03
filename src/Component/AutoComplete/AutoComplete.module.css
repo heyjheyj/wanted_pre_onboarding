@@ -1,0 +1,71 @@
+.container {
+    margin-top: 10px;
+    width: 80%;
+    height: 200px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.title {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.autoCompleteBox {
+    margin-top: 70px;
+    width: 80%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 14px;
+    max-height: 90px;
+    overflow: scroll;
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.1), 0 2px 4px 1px rgba(0,0,0, 0.18);
+}
+
+.autoCompleteBox > input {
+    width: 98%;
+    border-radius: 10px;
+    padding: 2px 0 2px 5px;
+    font-size: 16px;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.autoCompleteBox > ul {
+    list-style: none;
+    padding: 3px 5px 3px 5px;
+    border-top: 1px solid grey;
+}
+
+.autoCompleteBox > ul:before {
+    content: "";
+}
+
+.autoCompleteBox li {
+    cursor: pointer;
+    padding: 2px 0 2px 0;
+}
+
+.autoCompleteBox li:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+    color: grey;
+}
+
+.closebutton {
+    position: absolute;
+    right: 12%;
+    border: none;
+    background-color: transparent;
+    margin-top: 2px;
+}

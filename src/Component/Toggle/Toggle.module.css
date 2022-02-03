@@ -1,0 +1,90 @@
+.container {
+  width: 80%;
+  height: 200px;
+  align-items: center;
+  border: 1px solid grey;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+}
+
+.title {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.toggleSwitch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+}
+
+.toggleInner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin-left 0.4s ease-in;
+}
+
+.toggleInner:before,
+.toggleInner:after {
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  box-sizing: border-box;
+  content: "";
+}
+
+.toggleInner:before {
+  background-color: #431cc6;
+}
+
+.toggleInner:after {
+  background-color: #bbb;
+}
+
+.switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border: 0 solid #bbb;
+  border-radius: 50%;
+  transition: all 0.4s ease-in;
+}
+
+.checkbox:checked + .label .toggleInner {
+  margin-left: 0;
+}
+
+.checkbox:checked + .label .switch {
+  right: 0px;
+}
+
+.text {
+  margin-top: 20px;
+  color: gray;
+  font-weight: 600;
+}

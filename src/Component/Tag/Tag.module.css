@@ -1,0 +1,56 @@
+.container {
+    width: 80%;
+    height: 200px;
+    border: 1px solid grey;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.title {
+    top: 5px;
+    left: 5px;
+    position: absolute;
+}
+
+.tagContainer {
+    width: 80%;
+    height: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 0 5px 0;
+    max-height: 145px;
+    overflow: scroll;
+}
+
+.tagContainer:focus-within {
+    border: 1px solid #431cc6;
+  }
+
+.tags {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.textInput {
+    margin: 6px 0 0 6px;
+    font-size: 14px;
+    width: auto;
+    border: none;
+    border-radius: 10px;
+    height: 32px;
+}
+
+input:focus {
+    outline: none;
+}
