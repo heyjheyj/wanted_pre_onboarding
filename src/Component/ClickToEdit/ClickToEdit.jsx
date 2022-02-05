@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import styles from "./ClickToEdit.module.css";
 
 const ClickToEdit = props => {
@@ -6,13 +6,19 @@ const ClickToEdit = props => {
   const [age, setAge] = useState("20");
   const [currentFocus, setCurrentFocus] = useState("");
 
-  const changeName = e => {
-    setName(e.target.value);
-  };
+  const changeName = useCallback(
+    e => {
+      setName(e.target.value);
+    },
+    [setName]
+  );
 
-  const changeAge = e => {
-    setAge(e.target.value);
-  };
+  const changeAge = useCallback(
+    e => {
+      setAge(e.target.value);
+    },
+    [setAge]
+  );
 
   return (
     <div className={styles.container}>
