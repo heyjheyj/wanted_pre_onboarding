@@ -2,8 +2,6 @@
 
 ### Stack: React, PostCSS
 
-### Date(Duration): 2022년 2월 3일 ~ 2월 5일(3일)
-
 ### Heroku 배포 주소: https://wantedpreonboarding.herokuapp.com/
 
 ## 주요기능
