@@ -27,14 +27,11 @@ const AutoComplete = props => {
     [setSuggestions, setText]
   );
 
-  const clear = useCallback(
-    () => {
-      setIsAutoCompleting(false);
-      setText("");
-      setSuggestions([]);
-    },
-    [setIsAutoCompleting, setText, setSuggestions]
-  );
+  const clear = () => {
+    setIsAutoCompleting(false);
+    setText("");
+    setSuggestions([]);
+  };
 
   const renderSuggestions = useCallback(
     () => {
@@ -52,23 +49,20 @@ const AutoComplete = props => {
     [isAutoCompleting, suggestions, selectSuggestion]
   );
 
-  const handleTextChanged = useCallback(
-    e => {
-      let suggestedDataList = [];
-      let textValue = e.target.value;
+  const handleTextChanged = e => {
+    let suggestedDataList = [];
+    let textValue = e.target.value;
 
-      if (textValue !== "") {
-        const tempValue = textValue.replaceAll("\\", "\\\\");
-        const regex = new RegExp(`^${tempValue}`, "i");
-        suggestedDataList = data
-          .filter(e => regex.test(e.label))
-          .sort(compareLabel);
-      }
-      setSuggestions(suggestedDataList);
-      setText(textValue);
-    },
-    [setSuggestions, setText]
-  );
+    if (textValue !== "") {
+      const tempValue = textValue.replaceAll("\\", "\\\\");
+      const regex = new RegExp(`^${tempValue}`, "i");
+      suggestedDataList = data
+        .filter(e => regex.test(e.label))
+        .sort(compareLabel);
+    }
+    setSuggestions(suggestedDataList);
+    setText(textValue);
+  };
 
   const handleClick = useCallback(
     e => {

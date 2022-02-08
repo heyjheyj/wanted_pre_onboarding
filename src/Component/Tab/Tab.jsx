@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import styles from "./Tab.module.css";
 
 const Tab = props => {
@@ -11,7 +11,7 @@ const Tab = props => {
     transition: "background 0.5s ease"
   };
 
-  const changeTab = useCallback(order => setCurrent(order), [setCurrent]);
+  const changeTab = order => setCurrent(order);
 
   return (
     <div className={styles.container}>
