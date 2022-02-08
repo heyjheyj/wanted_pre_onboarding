@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TagComponent from "./ section/tag";
+import TagComponent from "./ section/tagComponent";
 import styles from "./Tag.module.css";
 
 const Tag = props => {
