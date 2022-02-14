@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle renders 1`] = `
+<div
+  className="container"
+>
+  <h3
+    className="title"
+  >
+    Toggle
+  </h3>
+  <div
+    className="toggleSwitch"
+  >
+    <input
+      className="checkbox"
+      data-testid="test-togglecheckbox"
+      id="toggleSwitch"
+      onClick={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="label"
+      htmlFor="toggleSwitch"
+    >
+      <span
+        className="toggleInner"
+      />
+      <span
+        className="switch"
+      />
+    </label>
+  </div>
+  <span
+    className="text"
+    data-testid="test-text"
+  >
+    Toggle Switch 
+    OFF
+  </span>
+</div>
+`;

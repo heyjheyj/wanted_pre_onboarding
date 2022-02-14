@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab renders 1`] = `
+<div
+  className="container"
+>
+  <h3
+    className="title"
+  >
+    Tab
+  </h3>
+  <ul
+    className="tabLists"
+  >
+    <li
+      className="tab"
+      data-testid="test-tab1"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#431cc6",
+          "color": "white",
+          "transition": "background 0.5s ease",
+        }
+      }
+    >
+      Tab1
+    </li>
+    <li
+      className="tab"
+      data-testid="test-tab2"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Tab2
+    </li>
+    <li
+      className="tab"
+      data-testid="test-tab3"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Tab3
+    </li>
+  </ul>
+  <span
+    className="text"
+    data-testid="test-text"
+  >
+    Tab Menu 
+    ONE
+  </span>
+</div>
+`;

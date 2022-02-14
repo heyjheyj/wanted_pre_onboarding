@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import TagComponent from "./ section/tagComponent";
 import styles from "./Tag.module.css";
 
-const Tag = props => {
-  const [tags, setTags] = useState([
-    { id: 1, text: "CodeStates" },
-    { id: 2, text: "jjang" }
-  ]);
+const Tag = ({ initTags }) => {
+  const [tags, setTags] = useState(initTags);
   const [id, setId] = useState(3);
 
   const onSubmit = e => {
@@ -25,14 +22,15 @@ const Tag = props => {
     <div className={styles.container}>
       <h3 className={styles.title}>Tag</h3>
       <div className={styles.tagContainer}>
-        <ul className={styles.tags}>
+        <ul className={styles.tags} data-testid="test-taglist">
           {tags.map(tag =>
             <TagComponent key={tag.id} tag={tag} deleteTag={deleteTag} />
           )}
         </ul>
         <input
           className={styles.textInput}
-          onKeyUp={onSubmit}
+          onKeyDown={onSubmit}
+          data-testid="test-input"
           placeholder="Please enter to add tags"
         />
       </div>

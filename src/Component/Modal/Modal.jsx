@@ -13,15 +13,21 @@ const Modal = props => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="test-container">
       <h3 className={styles.title}>Modal</h3>
-      <button className={styles.modalButton} onClick={showModal}>
+      <button
+        className={styles.modalButton}
+        onClick={showModal}
+        data-testid="test-openbutton"
+      >
         Open Modal
       </button>
       {isShowModal &&
-        <div className={styles.modal}>
+        <div className={styles.modal} data-testid="test-modal">
           <div className={styles.box}>
-            <button onClick={hideModal}>x</button>
+            <button onClick={hideModal} data-testid="test-closebutton">
+              x
+            </button>
             <span>HELLO CODESTATES</span>
           </div>
         </div>}

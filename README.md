@@ -1,8 +1,30 @@
 # 원티드 프리온보딩 프론트엔드 코스 과제
 
-### Stack: React, PostCSS
+### Stack: React, PostCSS, Jest, HTML/CSS/Javascript
 
 ### Heroku 배포 주소: https://wantedpreonboarding.herokuapp.com/
+
+### 프로젝트 셋팅 및 실행방법
+
+```
+$ git clone https://github.com/heyjheyj/wanted_pre_onboarding.git
+$ npm install
+$ npm start
+```
+
+### 프로젝트 Test방법
+
+```
+$ npm run test
+```
+
+### 배포
+
+```
+$ npm run build
+$ zip -r build.zip ./build
+$ build.zip file을 원하는 서버에 배포
+```
 
 ### 프로젝트 구조
 

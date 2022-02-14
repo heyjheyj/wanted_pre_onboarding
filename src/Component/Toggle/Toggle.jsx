@@ -15,13 +15,14 @@ const Toggle = props => {
           className={styles.checkbox}
           id="toggleSwitch"
           onClick={toggleSwitch}
+          data-testid="test-togglecheckbox"
         />
         <label className={styles.label} htmlFor="toggleSwitch">
           <span className={styles.toggleInner} />
           <span className={styles.switch} />
         </label>
       </div>
-      <span className={styles.text}>
+      <span className={styles.text} data-testid="test-text">
         Toggle Switch {isSwitchOn ? "ON" : "OFF"}
       </span>
     </div>

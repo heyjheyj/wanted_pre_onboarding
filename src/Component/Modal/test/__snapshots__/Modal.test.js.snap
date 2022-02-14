@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders 1`] = `
+<div
+  className="container"
+  data-testid="test-container"
+>
+  <h3
+    className="title"
+  >
+    Modal
+  </h3>
+  <button
+    className="modalButton"
+    data-testid="test-openbutton"
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+</div>
+`;

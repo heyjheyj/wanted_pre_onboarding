@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auto Complete renders 1`] = `
+<div
+  className="container"
+  data-testid="test-component"
+>
+  <h3
+    className="title"
+  >
+    AutoComplete
+  </h3>
+  <div
+    className="autoCompleteBox"
+    data-testid="test-container"
+  >
+    <input
+      autoComplete="off"
+      data-testid="test-input"
+      onChange={[Function]}
+      onClick={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <span
+    className="text"
+  >
+    Search Top 100 Films
+  </span>
+</div>
+`;

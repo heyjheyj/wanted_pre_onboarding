@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClickToEdit renders 1`] = `
+<div
+  className="container"
+>
+  <h3
+    className="title"
+  >
+    ClickToEdit
+  </h3>
+  <div
+    className="name"
+  >
+    <label
+      htmlFor="username"
+    >
+      이름
+      <input
+        className="input"
+        data-testid="test-nameinput"
+        defaultValue="김코딩"
+        id="username"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+      />
+    </label>
+  </div>
+  <div
+    className="age"
+  >
+    <label
+      htmlFor="userage"
+    >
+      나이
+      <input
+        className="input"
+        data-testid="test-ageinput"
+        defaultValue="20"
+        id="userage"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="text"
+      />
+    </label>
+  </div>
+  <span>
+    이름 
+    김코딩
+     나이 
+    20
+  </span>
+</div>
+`;

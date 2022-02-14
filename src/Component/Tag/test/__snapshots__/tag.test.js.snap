@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag renders 1`] = `
+<div
+  className="container"
+>
+  <h3
+    className="title"
+  >
+    Tag
+  </h3>
+  <div
+    className="tagContainer"
+  >
+    <ul
+      className="tags"
+      data-testid="test-taglist"
+    >
+      <li
+        className="tagcomponent"
+        data-testid="test-tag1"
+      >
+        <span
+          data-testid="test-text1"
+        >
+          CodeStates
+        </span>
+        <button
+          data-testid="test-deletebutton1"
+          onClick={[Function]}
+        >
+          x
+        </button>
+      </li>
+      <li
+        className="tagcomponent"
+        data-testid="test-tag2"
+      >
+        <span
+          data-testid="test-text2"
+        >
+          jjang
+        </span>
+        <button
+          data-testid="test-deletebutton2"
+          onClick={[Function]}
+        >
+          x
+        </button>
+      </li>
+    </ul>
+    <input
+      className="textInput"
+      data-testid="test-input"
+      onKeyDown={[Function]}
+      placeholder="Please enter to add tags"
+    />
+  </div>
+</div>
+`;

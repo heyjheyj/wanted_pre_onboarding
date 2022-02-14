@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from "./ClickToEdit.module.css";
 
-const ClickToEdit = props => {
-  const [name, setName] = useState("김코딩");
-  const [age, setAge] = useState("20");
+const ClickToEdit = ({ initEdit }) => {
+  const [name, setName] = useState(initEdit.name);
+  const [age, setAge] = useState(initEdit.age);
   const [currentFocus, setCurrentFocus] = useState("");
 
   const changeName = e => {
@@ -18,30 +18,38 @@ const ClickToEdit = props => {
     <div className={styles.container}>
       <h3 className={styles.title}>ClickToEdit</h3>
       <div className={styles.name}>
-        <label htmlFor="username">이름</label>
-        <input
-          className={
-            currentFocus === "name" ? `${styles.nameinput}` : `${styles.input}`
-          }
-          type="text"
-          id="username"
-          defaultValue={name}
-          onFocus={() => setCurrentFocus("name")}
-          onBlur={changeName}
-        />
+        <label htmlFor="username">
+          이름
+          <input
+            className={
+              currentFocus === "name"
+                ? `${styles.nameinput}`
+                : `${styles.input}`
+            }
+            type="text"
+            id="username"
+            data-testid="test-nameinput"
+            defaultValue={name}
+            onFocus={() => setCurrentFocus("name")}
+            onBlur={changeName}
+          />
+        </label>
       </div>
       <div className={styles.age}>
-        <label htmlFor="userage">나이</label>
-        <input
-          className={
-            currentFocus === "age" ? `${styles.ageinput}` : `${styles.input}`
-          }
-          type="text"
-          id="userage"
-          defaultValue={age}
-          onFocus={() => setCurrentFocus("age")}
-          onBlur={changeAge}
-        />
+        <label htmlFor="userage">
+          나이
+          <input
+            className={
+              currentFocus === "age" ? `${styles.ageinput}` : `${styles.input}`
+            }
+            type="text"
+            id="userage"
+            data-testid="test-ageinput"
+            defaultValue={age}
+            onFocus={() => setCurrentFocus("age")}
+            onBlur={changeAge}
+          />
+        </label>
       </div>
       <span>
         이름 {name} 나이 {age}

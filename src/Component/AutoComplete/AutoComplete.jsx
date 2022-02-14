@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import styles from "./AutoComplete.module.css";
-import data from "./data/data";
 
 const compareLabel = (a, b) => {
   const labelA = a.label.toUpperCase();
@@ -12,7 +11,7 @@ const compareLabel = (a, b) => {
   return 0;
 };
 
-const AutoComplete = props => {
+const AutoComplete = ({ initData }) => {
   const [suggestions, setSuggestions] = useState([]);
   const [text, setText] = useState("");
   const [isAutoCompleting, setIsAutoCompleting] = useState(false);
@@ -37,9 +36,13 @@ const AutoComplete = props => {
     () => {
       return (
         isAutoCompleting &&
-        <ul>
+        <ul data-testid="test-suggestionlist">
           {suggestions.map((item, index) =>
-            <li key={index} onClick={() => selectSuggestion(item.label)}>
+            <li
+              data-testid={`test-suggestion${index}`}
+              key={index}
+              onClick={() => selectSuggestion(item.label)}
+            >
               {item.label}
             </li>
           )}
@@ -56,7 +59,7 @@ const AutoComplete = props => {
     if (textValue !== "") {
       const tempValue = textValue.replaceAll("\\", "\\\\");
       const regex = new RegExp(`^${tempValue}`, "i");
-      suggestedDataList = data
+      suggestedDataList = initData
         .filter(e => regex.test(e.label))
         .sort(compareLabel);
     }
@@ -85,17 +88,26 @@ const AutoComplete = props => {
   );
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="test-component">
       <h3 className={styles.title}>AutoComplete</h3>
-      <div className={styles.autoCompleteBox} ref={boxRef}>
+      <div
+        className={styles.autoCompleteBox}
+        ref={boxRef}
+        data-testid="test-container"
+      >
         {isAutoCompleting &&
-          <button className={styles.closebutton} onClick={clear}>
+          <button
+            data-testid="test-clearbutton"
+            className={styles.closebutton}
+            onClick={clear}
+          >
             x
           </button>}
         <input
           value={text}
           type="text"
           autoComplete="off"
+          data-testid="test-input"
           onChange={handleTextChanged}
           onClick={() => setIsAutoCompleting(true)}
         />
