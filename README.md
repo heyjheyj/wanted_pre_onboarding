@@ -1,6 +1,7 @@
 # 원티드 프리온보딩 프론트엔드 코스 과제
 
 ### Stack: React, PostCSS, Jest, HTML/CSS/Javascript
+- 이 프로젝트에는 test 코드(unit test)가 있습니다.
 
 ### Heroku 배포 주소: https://wantedpreonboarding.herokuapp.com/
 
